@@ -13,7 +13,7 @@ pipeline {
 		
 		stage('Snyk Scan') {
 			steps{
-				snykSecurity organisation: 'suryaviyyapu', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
+				snykSecurity organisation: 'abhishekjosyula1122', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
 			}
 		}				
 	}
