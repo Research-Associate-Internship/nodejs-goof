@@ -5,7 +5,7 @@ pipeline {
 	stages {
 		stage ("Git checkout"){
 			steps {
-				git branch: "master",
+				git branch: "main",
 					url: "https://github.com/Research-Associate-Internship/nodejs-goof"
 				sh "ls"
 			}
