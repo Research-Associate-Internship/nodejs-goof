@@ -6,7 +6,7 @@ pipeline {
 		stage ("Git checkout"){
 			steps {
 				git branch: "master",
-					url: "https://github.com/Research-Associate-Internship/DVWA"
+					url: "https://github.com/Research-Associate-Internship/nodejs-goof"
 				sh "ls"
 			}
 		}
