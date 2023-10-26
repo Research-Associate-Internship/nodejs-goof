@@ -54,6 +54,8 @@ jobs:
         run: npm install
         env:
           SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
+      - name: auth 
+        run: snyk auth ${{SNYK_TOKEN}}
 
         # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
         # Use || true to not fail the pipeline
