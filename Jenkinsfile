@@ -2,6 +2,9 @@ pipeline {
 	agent {
 		label 'aj-node'
 	}
+	environment {
+        SNYK_TOKEN = credentials('snykajtoken')
+    }
 	stages {
 		stage ("Git checkout"){
 			steps {
