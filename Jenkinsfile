@@ -3,7 +3,7 @@ pipeline {
 		label 'docker-node'
 	}
 	environment {
-        SNYK_TOKEN = credentials('viyyapu-key-random')
+        SNYK_TOKEN = credentials('snykajtoken')
     }
 	stages {
 		stage ("Git checkout"){
