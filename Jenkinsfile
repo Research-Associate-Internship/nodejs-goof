@@ -1,9 +1,9 @@
 pipeline {
 	agent {
-		label 'aj-node'
+		label 'docker-node'
 	}
 	environment {
-        SNYK_TOKEN = credentials('snykajtoken')
+        SNYK_TOKEN = credentials('viyyapu-key-random')
     }
 	stages {
 		stage ("Git checkout"){
@@ -14,10 +14,10 @@ pipeline {
 			}
 		}
 		
-		stage('Snyk Scan') {
-			steps{
-				snykSecurity failOnIssues: false, organisation: 'abhishekjosyula1122', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
-			}
-		}				
+		//stage('Snyk Scan') {
+		//	steps{
+		//		snykSecurity failOnIssues: false, organisation: 'abhishekjosyula1122', snykInstallation: 'SnykJ', snykTokenId: 'Snyk'
+		//	}
+		//}				
 	}
 }
