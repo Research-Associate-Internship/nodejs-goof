@@ -3,7 +3,7 @@ pipeline {
 		label 'docker-node'
 	}
 	environment {
-        SNYK_TOKEN = credentials('snykajtoken')
+        SNYK_TOKEN = credentials('sectoken')
     }
 	stages {
 		stage ("Git checkout"){
